@@ -5,10 +5,11 @@
     <title>Be My Valentine 💖</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- <audio id="bgMusic" src="assets/music.mp3" loop></audio> -->
+    <audio id="bgMusic" src="assets/music.mp3" loop></audio>
 
     <div class="container">
         <h1 id="question"></h1>
@@ -19,7 +20,20 @@
         </div>
     </div>
 
-    <!-- Confetti Library -->
+
+    <div class="love-letter" id="loveLetter">
+    <div class="letter-content">
+        <h2>💌 A Letter For You</h2>
+        <p>
+            From the moment I met you,  
+            everything feels brighter.  
+            Will you make my world even more beautiful? 💕
+        </p>
+        <button onclick="closeLetter()">Close 💖</button>
+    </div>
+</div>
+
+   
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
 </body>

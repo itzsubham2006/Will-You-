@@ -1,9 +1,11 @@
+
 const question = document.getElementById("question");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const music = document.getElementById("bgMusic");
 
-let name = prompt("Enter your name 💕");
+
+let name = prompt("Enter your name 💕") || "Cutie";
 question.innerText = `${name}, will you be my Valentine? 💖`;
 
 let noClickCount = 0;
@@ -21,43 +23,91 @@ const messages = [
 
 
 document.body.addEventListener("click", () => {
-    music.play();
+    if (music) music.play().catch(() => {});
 }, { once: true });
+
+
 
 noBtn.addEventListener("click", () => {
 
     if (noClickCount < messages.length) {
         question.innerText = messages[noClickCount];
-        noClickCount++;
     }
 
+    noClickCount++;
+
+
+    if (noClickCount === 3) {
+        document.getElementById("loveLetter").style.display = "flex";
+    }
+
+   
     const randomX = Math.floor(Math.random() * 300) - 150;
     const randomY = Math.floor(Math.random() * 300) - 150;
 
     noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
 
+   
     yesBtn.style.transform = `scale(${1 + noClickCount * 0.2})`;
 });
 
+
 yesBtn.addEventListener("click", () => {
 
-    question.innerHTML = `Yayyyyy ${name}!!! 💖💖💖<br>You made me the happiest person 🥰`;
+    question.innerHTML = `
+        💖 YAYYYYY ${name}!!! 💖<br><br>
+        You just made me the happiest person alive 🥰<br>
+        Sending unlimited hugs 🤗💞
+    `;
 
     document.querySelector(".buttons").style.display = "none";
-
     document.body.style.background = "linear-gradient(135deg, #ff758c, #ff7eb3)";
 
     launchConfetti();
+    addTeddy();
 });
 
 
+
 function launchConfetti() {
-    confetti({
-        particleCount: 200,
-        spread: 70,
-        origin: { y: 0.6 }
-    });
+    if (typeof confetti === "function") {
+        confetti({
+            particleCount: 200,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+    }
 }
+
+
+function addTeddy() {
+    const teddy = document.createElement("div");
+    teddy.innerHTML = "🧸💖";
+    teddy.style.fontSize = "70px";
+    teddy.style.marginTop = "20px";
+    document.querySelector(".container").appendChild(teddy);
+}
+
+
+
+function closeLetter() {
+    document.getElementById("loveLetter").style.display = "none";
+}
+
+
+
+document.addEventListener("mousemove", (e) => {
+    const heart = document.createElement("div");
+    heart.classList.add("trail-heart");
+    heart.innerText = "💗";
+    heart.style.left = e.pageX + "px";
+    heart.style.top = e.pageY + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 1000);
+});
 
 
 setInterval(() => {
@@ -72,4 +122,4 @@ setInterval(() => {
         heart.remove();
     }, 5000);
 
-}, 500);
+}, 600);
