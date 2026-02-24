@@ -4,9 +4,23 @@ const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const music = document.getElementById("bgMusic");
 
+const stickerImg = document.getElementById("stickerImg");
 
-let name = prompt("Enter your name 💕") || "Cutie";
-question.innerText = `${name}, will you be my Valentine? 💖`;
+const stickers = [
+    "https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif",
+    "assets/stickers/st-1.gif",
+    "assets/stickers/st-2.gif",
+    "assets/stickers/st-3.gif",
+    "assets/stickers/st-4.gif",
+    "assets/stickers/st-5.gif",
+    "assets/stickers/st-6.gif",
+    "assets/stickers/st-7.gif",
+    "assets/stickers/st-8.gif",    
+];
+
+
+let name = prompt("Enter your name pleaseeee") || "Cutieee";
+question.innerText = `${name}, will you be my Valentine? 🫣💖`;
 
 let noClickCount = 0;
 
@@ -19,7 +33,7 @@ const messages = [
     "Still no?? 🥲",
     "Babbyyyyyyy..😭😭😭",
     "Noo.. you are mine..😖",
-    "Hihihihiiii..😁"
+    "Hihihihihiii..😁"
 ];
 
 
@@ -30,6 +44,9 @@ document.body.addEventListener("click", () => {
 
 
 noBtn.addEventListener("click", () => {
+    
+    const randomSticker = stickers[Math.floor(Math.random() * stickers.length)];
+    stickerImg.src = randomSticker;
 
     if (noClickCount < messages.length) {
         question.innerText = messages[noClickCount];

@@ -14,6 +14,45 @@ body {
     overflow: hidden;
     text-align: center;
 }
+/* .sticker-area {
+    position: absolute;
+    top: 80px;   
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.sticker-area img {
+    width: 180px;
+    transition: transform 0.4s ease;
+    border-radius: 10px;
+    height: 180px;     
+    object-fit: contain; 
+} */
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+.sticker-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -190%);
+    z-index: 1;
+}
+
+.sticker-area img {
+    width: clamp(100px, 28vw, 160px);
+    height: clamp(100px, 28vw, 160px);
+    object-fit: contain;
+}
+
+
+.sticker-area img:hover {
+    transform: scale(1.1);
+}
 
 .container {
     background: white;
@@ -53,6 +92,9 @@ button {
 }
 
 #yesBtn:hover {
+    transform: scale(1.1);
+}
+#noBtn:hover {
     transform: scale(1.1);
 }
 
