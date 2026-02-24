@@ -14,11 +14,19 @@ const messages = [
     "Are you sure? 🥺",
     "Really sure? 😢",
     "Think again 💔",
-    "Please reconsider 😭",
-    "Don't break my heart 💕",
+    "Arreeee yarr, sachiii?💔",
+    "Muchhiiiii...??🥺🥺🥺",
+    "Please maan jaooo..😭",
+    "Piliiitttzzzzz 🥺🥺",
     "I will cry 😭",
     "Last chance 😔",
-    "Still no?? 🥲"
+    "Pleaseeeee 🥺",
+    "Kitni gandi ldki ha🥺🥺",
+    "Still no?? 🥲",
+    "Maaann jaooo na😭😖",
+    "Babbyyyyyyy..😭😭😭",
+    "Noo.. you are mine..😖",
+    "Hihihihiiii..😁"
 ];
 
 
@@ -56,8 +64,8 @@ yesBtn.addEventListener("click", () => {
 
     question.innerHTML = `
         💖 YAYYYYY ${name}!!! 💖<br><br>
-        You just made me the happiest person alive 🥰<br>
-        Sending unlimited hugs 🤗💞
+        Thank you soo much.. You just made me the happiest person alive 🥰<br>
+        Loveee youuuu...🤗💞
     `;
 
     document.querySelector(".buttons").style.display = "none";
