@@ -13,12 +13,13 @@ let noClickCount = 0;
 const messages = [
     "Are you sure? 🥺",
     "Really sure? 😢",
-    "Think again 💔",
-    "Please reconsider 😭",
-    "Don't break my heart 💕",
     "I will cry 😭",
     "Last chance 😔",
-    "Still no?? 🥲"
+    "Pleaseeeee 🥺",
+    "Still no?? 🥲",
+    "Babbyyyyyyy..😭😭😭",
+    "Noo.. you are mine..😖",
+    "Hihihihiiii..😁"
 ];
 
 
@@ -56,8 +57,8 @@ yesBtn.addEventListener("click", () => {
 
     question.innerHTML = `
         💖 YAYYYYY ${name}!!! 💖<br><br>
-        You just made me the happiest person alive 🥰<br>
-        Sending unlimited hugs 🤗💞
+        Thank you soo much.. You just made me the happiest person alive 🥰<br>
+        Loveee youuuu...🤗💞
     `;
 
     document.querySelector(".buttons").style.display = "none";
