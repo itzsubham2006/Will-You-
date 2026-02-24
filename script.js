@@ -13,17 +13,10 @@ let noClickCount = 0;
 const messages = [
     "Are you sure? 🥺",
     "Really sure? 😢",
-    "Think again 💔",
-    "Arreeee yarr, sachiii?💔",
-    "Muchhiiiii...??🥺🥺🥺",
-    "Please maan jaooo..😭",
-    "Piliiitttzzzzz 🥺🥺",
     "I will cry 😭",
     "Last chance 😔",
     "Pleaseeeee 🥺",
-    "Kitni gandi ldki ha🥺🥺",
     "Still no?? 🥲",
-    "Maaann jaooo na😭😖",
     "Babbyyyyyyy..😭😭😭",
     "Noo.. you are mine..😖",
     "Hihihihiiii..😁"
