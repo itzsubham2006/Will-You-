@@ -1,25 +1,25 @@
-Website link : https://itzsubham2006.github.io/Will-You-/
+#### Website link : https://itzsubham2006.github.io/Will-You-/
  
  
  
- 💖 Will You Be My Valentine?
+ >> Will You Be My Valentine?
 
-This is my simple, cute, and interactive Valentine’s Day proposal website.
+>> This is my simple, cute, and interactive Valentine’s Day proposal website.
 
 
-🚀 How to Run
+#### How to Run
 
-Clone the repository:
+>> Clone the repository:
 
-git clone https://github.com/your-username/will-you-be-my-valentine.git
+#### git clone https://github.com/your-username/will-you-be-my-valentine.git
 
-📂 Project Structure
-📦 Will-You
- ┣ 📜 index.html
- ┣ 📜 style.css
- ┣ 📜 script.js
- ┗ 📜 README.md
- ┗ 📜 assets/music.mp3
+#### Project Structure
+>> Will-You/
+>> ┣ index.html
+>> ┣ style.css
+>> ┣ script.js
+>> ┗ README.md
+>> ┗ assets/music.mp3
 
 
 
